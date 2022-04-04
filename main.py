@@ -27,12 +27,14 @@ while len(data) > 0:
   bscore = datab["follower_count"]
   
   print(f"Compare A: {aname}, {adescription} from {acountry} ")
+  #print(f"{ascore}")
   print(vs)
   print(f"Against B: {bname}, {bdescription} from {bcountry} ")
+  #print(f"{bscore}")
 
   yourchoice = ""  
   while True:
-    yourchoice = input().upper()
+    yourchoice = input("Who is having more follower ?").upper()
     if yourchoice.upper() == "A" or yourchoice.upper() == "B":
       break
     print("Please type A or B only")
@@ -51,3 +53,5 @@ while len(data) > 0:
     if bscore > ascore:
       dataa = datab
 
+if len(data) == 0:
+  print(f"Wow you are really good at this game! congratz")
